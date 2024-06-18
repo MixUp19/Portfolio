@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Line Portfolio</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <script src="node_modules/animejs/lib/anime.min.js"></script>
+</head>
+<body>
+    <div class="train-container">
+        <svg id="train-svg" width="100%" height="500">
+            <path id="train-path" stroke="black" fill="transparent"/>
+            <g id="train" >
+                <!-- Body -->
+                <rect  y="-20" width="80" height="40" fill="#ffffff" rx="10" ry="10"/>
+                <!-- Windows -->
+                <rect x="10" y="-15" width="15" height="15" fill="#d3d3d3" rx="3" ry="3"/>
+                <rect x="30" y="-15" width="15" height="15" fill="#d3d3d3" rx="3" ry="3"/>
+                <rect x="50" y="-15" width="15" height="15" fill="#d3d3d3" rx="3" ry="3"/>
+                <!-- Front window -->
+                <path d="M 75 -20 Q 100 -20, 95 0 Q 100 20, 75 20 Z" fill="#87ceeb"/>
+                <!-- Stripe -->
+                <rect  y="5" width="75" height="10" fill="#ffd700" rx="5" ry="5"/>
+            </g>
+        </svg>
+        <button id="avanzar" onclick="avanzar()">Avanzar</button>
+    </div>
+    <div id="content">
+        <section id="resume" class="section">
+            <h2>Resume</h2>
+            <p>Here is my resume...</p>
+        </section>
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <p>Here is my education background...</p>
+        </section>
+        <section id="abilities" class="section">
+            <h2>Abilities</h2>
+            <p>Here are my abilities...</p>
+        </section>
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <p>Here are my projects...</p>
+        </section>
+        <section id="end" class="section">
+            <h2>End of the Line</h2>
+            <p>You have reached the end of the portfolio.</p>
+        </section>
+    </div>
+    <script src="JS/index.js"></script>
+</body>
+</html>
