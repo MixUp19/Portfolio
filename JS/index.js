@@ -63,7 +63,10 @@ function updateTrainAnimation() {
 }
 
 window.addEventListener("resize", createPath);
-window.addEventListener("load", createPath);
+window.addEventListener("load", function() {
+    createPath();
+    showPopup(stations[currentStation]);
+});
 
 const stations = [0, 25, 50, 75, 100];  // Percentages at which to stop
 let currentStation = 0;
@@ -113,7 +116,6 @@ function hidePopup() {
             easing: 'easeInExpo',
             complete: function() {
                 sectionToHide.classList.remove('show');
-                sectionToHide.classList.add('hide');
                 if (currentStation >= stations.length - 1) {
                     currentStation = 0; // Reset the station to the beginning
                     animation.restart();

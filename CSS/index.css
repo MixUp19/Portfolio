@@ -7,6 +7,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
+    overflow: hidden;
 }
 
 .train-container {
@@ -27,26 +28,45 @@ rect {
     filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.3));
 }
 
+.profile-container {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 100px;  /* Ajusta este valor según el tamaño deseado */
+    height: auto;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-text {
+    flex: 1;
+}
+.red{
+    max-width: 30%;
+    height: auto;
+}
 .section {
     display: none;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 2%;
+    left: 5%;       
+    transform: translateX(-50%);
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    max-width: 90%;
+    max-height: 65%;
+    overflow-y: auto;
 }
 
 .section.show {
     display: block;
 }
 
-.section.hide {
-    display: none;
-}
 
 button#avanzar {
     position: absolute;
@@ -72,4 +92,28 @@ button#avanzar:hover {
 button#avanzar:active {
     background-color: #ff1e56;
     transform: translateX(-50%) scale(1.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* Ensure the video scales properly */
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
